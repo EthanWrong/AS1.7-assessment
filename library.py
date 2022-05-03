@@ -61,7 +61,23 @@ numbers_dict = {
 
 }
 
-# dictionary of
+# unfinished dictionary of the days in English and Maori
+days_dict = {
+    "monday": {
+        "english": ["monday", "mon"],
+        "maori": ["rāhina", "rahina", "mane"]
+    }
+}
+
+# unfinished dictionary of the months in English and Maori
+months_dict = {
+    "january": {
+        "english": ["january", "jan"],
+        "maori": ["hānuere ", "hanuere"]
+    }
+}
+
+# dictionary of the word 'family' in English and Maori
 test_dict = {
     "family": {
         "english": ["family"],
@@ -72,7 +88,7 @@ test_dict = {
 """ below is sample code for examples on how to reference and use the 
 dictionary in a different file """
 
-# import dictionary the word 'family' in English and Maori
+# import dictionary
 
 
 # print(dictionary.numbers_dict)
