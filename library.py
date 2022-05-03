@@ -4,7 +4,7 @@ created by Ethan Wong.
 ** Understanding**
 > Each separate themed dictionary is a variable named __dict (ie theme_dict).
 
-> Inside these dictionaries are word-sets, which are identified by the
+> Inside these dictionaries are WORD-SETS, which are identified by the
 English translation of each word
 
 > Word-sets contain two items which are lists, the English translation(s) and
