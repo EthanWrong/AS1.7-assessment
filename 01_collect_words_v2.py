@@ -80,7 +80,7 @@ choices = []
 possible_choices = ["numbers", "days", "months", "x", "all"]
 
 collection_choice = input("From what collection of words would you like to "
-                          "learn >>> ").lower()
+                          "learn >> ").lower()
 master_list = choose_collection(master_list, collection_choice)
 
 while collection_choice != "x":
