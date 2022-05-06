@@ -1,5 +1,9 @@
 """This is a dictionary of words in their English and Maori translations
 created by Ethan Wong.
+All maori translations according to
+https://www.maorilanguage.net/maori-words-phrases and
+with secondary translations added from
+https://maoridictionary.co.nz/
 
 ** Understanding**
 > Each separate themed collection is called __collection (e.g
@@ -61,19 +65,87 @@ numbers_collection = [
     }
 ]
 
-# unfinished collection of the days in English and Maori
+# collection of the days in English and Maori
 days_collection = [
     {
         "english": ["monday", "mon"],
         "maori": ["rāhina", "rahina", "mane"]
+    },
+    {
+        "english": ["tuesday", "tue"],
+        "maori": ["rātū ", "ratu", "turei"]
+    },
+    {
+        "english": ["wednesday", "wed"],
+        "maori": ["rāapa ", "raapa", "wenerei"]
+    },
+    {
+        "english": ["thursday", "thu"],
+        "maori": ["rāpare ", "rapare", "taite"]
+    },
+    {
+        "english": ["friday", "fri"],
+        "maori": ["rāmere ", "ramere", "paraire"]
+    },
+    {
+        "english": ["saturday", "sat"],
+        "maori": ["rāhoroi ", "rahoroi", "hatarei"]
+    },
+    {
+        "english": ["sunday", "sun"],
+        "maori": ["rātapu ", "ratapu"]
     }
 ]
 
-# unfinished collection of the months in English and Maori
+# collection of the months in English and Maori
 months_collection = [
     {
         "english": ["january", "jan"],
-        "maori": ["hānuere ", "hanuere"]
+        "maori": ["hanuere", "kohitātea", "kohitatea"]
+    },
+    {
+        "english": ["february", "feb"],
+        "maori": ["pēpuere", "pepuere", "hui-tanguru", "pēpuere"]
+    },
+    {
+        "english": ["march", "mar"],
+        "maori": ["maehe", "poutū-te-rangi", "poutu-te-rangi"]
+    },
+    {
+        "english": ["april", "apr"],
+        "maori": ["āperira", "aperira", "paenga-whāwhā", "paenga-whawha"]
+    },
+    {
+        "english": ["may"],
+        "maori": ["mei", "haratua", "maramarima"]
+    },
+    {
+        "english": ["june", "jun"],
+        "maori": ["hune", "pipiri"]
+    },
+    {
+        "english": ["july", "jul"],
+        "maori": ["hūrae", "hurae", "hōngongoi", "hongongoi"]
+    },
+    {
+        "english": ["august", "aug"],
+        "maori": ["akuhata", "ākuhata", "here-turi-kōkā", "here-turi-koka"]
+    },
+    {
+        "english": ["september", "sep"],
+        "maori": ["hepetema", "mahuru"]
+    },
+    {
+        "english": ["october", "oct"],
+        "maori": ["ōketopa", "oketopa", "whiringa-ā-nuku", "whiringa-a-nuku"]
+    },
+    {
+        "english": ["november", "nov"],
+        "maori": ["noema", "whiringa-ā-rangi", "whiringa-a-rangi"]
+    },
+    {
+        "english": ["december", "dec"],
+        "maori": ["tīhema", "tihema", "hakihea"]
     }
 ]
 
