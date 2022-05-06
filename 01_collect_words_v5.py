@@ -28,8 +28,8 @@ def choice_selection(master):
 
         elif choice == "x":
             if collections:
-                print("exit choice selection")
-                print()
+                # print("exit choice selection")
+                # print()
                 break
             else:
                 print("<error>, you need to pick some words")
@@ -71,7 +71,7 @@ def choice_selection(master):
                 "If you would like to add another collection, do so. "
                 "Otherwise type 'x' >>> ").lower()
 
-    print("Exited.")
+    print("Choice selection complete.")
     print()
     print(f"You chose: {', '.join(collections)}")
     return master
