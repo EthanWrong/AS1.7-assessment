@@ -1,5 +1,5 @@
-"""Code that asks player what language they want to use using
-02_abcd_checker_v2"""
+"""Code that asks player what language they want to use (using
+02_abcd_checker_v2)"""
 
 
 # function that can take a question and 4 possible answers. ANSWERS CANNOT
