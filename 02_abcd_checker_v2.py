@@ -41,6 +41,7 @@ def abcd_checker(question, a, b, c=None, d=None):
             # if all possible answers have been assigned
             else:
                 print(f"Please answer '{a}', '{b}', '{c}', or '{d}'")
+            print("(Just the first letter works too)")
 
 
 print(abcd_checker("How are you?", "good", "bad", "ok"))
