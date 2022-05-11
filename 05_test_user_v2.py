@@ -1,4 +1,4 @@
-"""Code built on v2
+"""Code built on v1
 Now keeps track of questions right/wrong using data stored in dictionaries
 added to lists"""
 
