@@ -29,12 +29,6 @@ def remember_question(question, answers, user_answer):
             "user_answer": user_answer}  # what the user answered
 
 
-def check_for_dict_repeats_in_list(list, index):
-    for i in range(len(list)):
-        questions = []
-        question = list[i][index]
-        if question ==
-
 # main routine
 
 # these variables will be set with the generate_question method
