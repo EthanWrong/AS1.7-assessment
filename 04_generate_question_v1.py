@@ -1,4 +1,4 @@
-"""Code that picks a random question"""
+"""Code that picks a random question and its correct answers"""
 import library_v2
 import random
 
@@ -31,16 +31,18 @@ def get_question(word_set, language):
     elif language == "maori":
         return word_set["english"][0]
 
+
 # main routine
 
 
 # these variables will be set using user input in the final program
 master_list = library_v2.numbers_collection
-language_choice = "both"
+language_choice = input("Maori, English, or Both >>> ").lower()
 
-test_word_set = choose_word_set(master_list)
-test_language = set_language(language_choice)
+for i in range(1, 11):
+    test_word_set = choose_word_set(master_list)
+    test_language = set_language(language_choice)
 
-print(get_correct_answers(test_word_set, test_language))
-print(get_question(test_word_set, test_language))
-
+    test_question = get_question(test_word_set, test_language)
+    test_answers = get_correct_answers(test_word_set, test_language)
+    print(f"{i}) Question: {test_question} | Answers: {test_answers}")
