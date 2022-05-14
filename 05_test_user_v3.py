@@ -32,8 +32,8 @@ def remember_question(question, answers, user_answer):
 # main routine
 
 # these variables will be set with the generate_question method
-q = "one"
-a = ["tahi", "nopee"]
+q = "four"
+a = ["whā", "wha"]
 q2 = "tekau"
 a2 = ["ten", "10"]
 
