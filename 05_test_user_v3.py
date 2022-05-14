@@ -19,7 +19,7 @@ def test_user(question, answers, language="The corresponding Language"):
 
     # if there was more than one possible answer
     if len(answers) > 1:
-        print(f"Other possible answers included: {', '.join(answers[1:])}")
+        print(f"All possible answers include: {', '.join(answers)}")
     print()
 
 
