@@ -15,11 +15,11 @@ def test_user(question, answers, language="The corresponding Language"):
     else:
         print("Incorrect")
         print(f"The correct answer was {answers[0]}")
-        wrong_answers.append(remember_question(question, answers, user_answer))
+        mistakes.append(remember_question(question, answers, user_answer))
 
     # if there was more than one possible answer
     if len(answers) > 1:
-        print(f"Other possible answers included: {', '.join(answers)}")
+        print(f"Other possible answers included: {', '.join(answers[1:])}")
     print()
 
 
@@ -37,10 +37,10 @@ a = ["whā", "wha"]
 q2 = "tekau"
 a2 = ["ten", "10"]
 
-wrong_answers = []
+mistakes = []
 correct_answers = []
 
 test_user(q, a, "maori")
 test_user(q2, a2, "english")
-print(wrong_answers)
-print(correct_answers)
+print(f"Mistakes: {mistakes}")
+print(f"Correct answers: {correct_answers}")
