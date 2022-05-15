@@ -91,7 +91,7 @@ def play_round(chosen_language, master):
 # main routine
 
 # pre-game
-master_list = library_v2.numbers_collection  # will be set using comp 01
+master_list = library_v2.numbers_collection[:5]  # will be set using comp 01
 language_choice = "english"  # will be set using component 03
 
 mistakes = []
