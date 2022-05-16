@@ -75,6 +75,24 @@ def choose_collection(master, choice):
 # the name of the word-set, and a dictionary of translations.
 # word_set1 = list(master_list.items())[0]
 
+def get_player_choice(master):
+    while True:  # code will loop until a valid option is given
+        choice = input("Choose another collection: ").lower()
+
+        if choice in collections:  # checks user input is one of the
+            # collections
+            master = choose_collection(master, choice)
+            return master
+
+        elif choice in other_options:  # checks user input is an option
+            if choice == "all":
+                master = choose_collection(master, choice)
+                return master
+            else:
+                return "end"
+        else:
+            print(f"Sorry, there is no collection called '{choice}'")
+
 
 # main routine
 
@@ -102,23 +120,7 @@ other_options = ["all", "x"]
 #     master_list = choose_collection(master_list, collection_choice)
 
 
-def get_player_choice(master):
-    while True:  # code will loop until a valid option is given
-        choice = input("Choose another collection: ").lower()
 
-        if choice in collections:  # checks user input is one of the
-            # collections
-            master = choose_collection(master, choice)
-            return master
-
-        elif choice in other_options:  # checks user input is an option
-            if choice == "all":
-                master = choose_collection(master, choice)
-                return master
-            else:
-                return "end"
-        else:
-            print(f"Sorry, there is no collection called '{choice}'")
 
 
 # choice = input("Choose first one: ").lower()
