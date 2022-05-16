@@ -104,7 +104,7 @@ other_options = ["all", "x"]
 
 def get_player_choice(master):
     while True:  # code will loop until a valid option is given
-        choice = input("Choose moree: ").lower()
+        choice = input("Choose another collection: ").lower()
 
         if choice in collections:  # checks user input is one of the
             # collections
