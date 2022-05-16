@@ -120,9 +120,6 @@ other_options = ["all", "x"]
 #     master_list = choose_collection(master_list, collection_choice)
 
 
-
-
-
 # choice = input("Choose first one: ").lower()
 # master_list = choose_collection(master_list, choice)
 
