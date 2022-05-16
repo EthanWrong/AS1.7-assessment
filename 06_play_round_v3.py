@@ -82,8 +82,9 @@ def play_round(chosen_language, master):
     elif not is_correct:
         master.append(word_set)
 
+    # this code is only to display testing
     master_display = pprint.pformat(master)
-    print(master_display)
+    print(f"Master-list of word-sets to choose from: \n{master_display}")
 
     return master
 
@@ -100,7 +101,7 @@ correct_answers = []
 # game mechanics / looping
 i = 1
 while len(master_list) > 0:
-    print(f"Round {i}: ")
+    print(f"Question {i}: ")
     master_list = play_round(language_choice, master_list)
     i += 1
 
