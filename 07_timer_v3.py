@@ -25,12 +25,12 @@ def write_min_and_sec(seconds):
     minutes = int(seconds // 60)
     and_seconds = int(seconds % 60)
 
-    if str(minutes)[-1] != "1":
+    if str(minutes) != "1":
         min_s = "s"
     else:
         min_s = ""
 
-    if str(and_seconds)[-1] != "1":
+    if str(and_seconds) != "1":
         sec_s = "s"
     else:
         sec_s = ""
@@ -39,12 +39,13 @@ def write_min_and_sec(seconds):
 
 
 # main routine
-
+wait = int(input("How long to wait in seconds >>> "))
 
 user_start = start_timer()
-input("Type the letter 'x' >>> ")
-input("Type the letter 'y' >>> ")
+# any program could go in here
+print(f"Waiting {wait} seconds...")
+time.sleep(wait)
 user_stop = stop_timer()
 
 time = calc_time(user_start, user_stop)
-print(f"It took you {write_min_and_sec(time)} to type the letter 'x' and 'y'")
+print(write_min_and_sec(time))
