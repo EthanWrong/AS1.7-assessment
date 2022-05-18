@@ -2,6 +2,7 @@
 + 01_collect_words_v5
 + 03_choose_language_v1
 + 06_play_round_v4
++ 07_timer_v3
 
 Added ability to quit while playing a round
 Added tracker for how many questions left to answer
