@@ -6,6 +6,11 @@
 
 Added ability to quit while playing a round
 Added tracker for how many questions left to answer
+
+To add (maybe):
+Only need to type first letter of collection to add in pre-game phase
+Entering a '?' while translating does not mean a mistake, but a question
+that you didn't know?
 """
 import library_v2
 import pprint
