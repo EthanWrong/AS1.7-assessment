@@ -344,3 +344,6 @@ print(f"It took you {write_min_and_sec(user_time)} to answer "
       f"{total_questions_answered} questions")
 print(f"You got {correct_num} correct, and made {mistakes_num} mistakes")
 
+print(mistakes)
+
+
