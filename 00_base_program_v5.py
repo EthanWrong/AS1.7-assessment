@@ -218,7 +218,7 @@ def test_user(question, answers, question_number, language="The "
     else:
         print("Incorrect")
         print(f"The correct answer was {answers[0]}")
-        mistakes.append(remember_question(question, answers, user_answer))
+        user_mistakes.append(remember_question(question, answers, user_answer))
         is_correct = False
 
     # if there was more than one possible answer
@@ -434,7 +434,7 @@ print(f"You chose to answer in: {language_choice}")
 print()
 
 
-mistakes = []
+user_mistakes = []
 correct_answers = []
 
 # PLAY ROUND
@@ -448,7 +448,7 @@ user_stop = stop_timer()
 print()
 
 # post-game
-mistakes_num = len(mistakes)
+mistakes_num = len(user_mistakes)
 correct_num = len(correct_answers)
 total_questions_answered = mistakes_num + correct_num
 
@@ -459,8 +459,8 @@ print(f"You got {correct_num} correct, and made {mistakes_num} mistakes")
 print()
 
 # REVIEW MISTAKES
-if len(mistakes) > 0:
-    review_mistakes(mistakes)
+if len(user_mistakes) > 0:
+    review_mistakes(user_mistakes)
 else:
     print("You didn't make any mistakes! Ka Pai!")
 
