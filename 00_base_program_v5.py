@@ -7,8 +7,7 @@
 + 10_review_mistakes_v5
 
 
-Added ability to quit while playing a round
-Added tracker for how many questions left to answer
+Added uppercase for displaying correct answers
 
 To add (maybe):
 Only need to type first letter of collection to add in pre-game phase
@@ -217,13 +216,13 @@ def test_user(question, answers, question_number, language="The "
     # if answer is incorrect
     else:
         print("Incorrect")
-        print(f"The correct answer was {answers[0]}")
+        print(f"The correct answer was {answers[0].upper()}")
         user_mistakes.append(remember_question(question, answers, user_answer))
         is_correct = False
 
     # if there was more than one possible answer
     if len(answers) > 1:
-        print(f"All possible answers include: {', '.join(answers)}")
+        print(f"All possible answers include: {', '.join(answers).upper()}")
 
     return is_correct
 
@@ -245,7 +244,7 @@ def play_round(chosen_language, master, question_number):
 
     is_correct = test_user(question, answers, question_number, language)
     if is_correct == "exit":
-        print("You ")
+        print("Game over.")
         return []
     elif is_correct == "repeat":
         print("Good for you.\n")
