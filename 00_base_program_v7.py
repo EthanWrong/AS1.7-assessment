@@ -8,6 +8,7 @@
 + 11_pluraliser_v1
 - 11_pluraliser_v1 (moved to 12_text_decoration)
 + import text_decoration
++ adjust text formatting for collection selection & language selection
 
 
 To add (maybe):
