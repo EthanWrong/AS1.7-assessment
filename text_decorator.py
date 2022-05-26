@@ -80,7 +80,7 @@ def print_incorrect_answer(user_answer, correct_answer):
     incorrect_text = f"'{user_answer.upper()}' ✗ Incorrect"
     print_surrounding(2, 4, incorrect_text, 77, "░")
 
-    correct_text = f"'{correct_answer}' is the answer"
+    correct_text = f"'{correct_answer.upper()}' is the answer"
     print_surrounding(2, 4, correct_text, 77, "▓")
 
     print_bar(2, 75, "▔")
@@ -131,6 +131,24 @@ def welcome_banner():
     print_bar(0, 79, ")")
 
 
+# specifically prints reviewable stats
+def print_stats(questions, correct, mistakes, time, sec_p_q):
+    print(f"{body_indent()}🖊 {questions} question"
+          f"{pluraliser(questions, 's')}")
+    print(f"{body_indent()}✓ {correct} correct")
+    print(f"{body_indent()}✗ {mistakes} mistake{pluraliser(mistakes, 's')}")
+
+    print()
+
+    minutes = time[0]
+    seconds = time[1]
+    minutes_and_seconds = f"{minutes} minute{pluraliser(minutes, 's')} and " \
+                          f"{seconds} second{pluraliser(seconds, 's')}"
+    print(f"{body_indent()}🕑 {minutes_and_seconds}")
+    print(f"{body_indent()}⌛ {sec_p_q} second{pluraliser(sec_p_q, 's')} per "
+          f"question")
+
+
 # example code below
 
 
@@ -148,3 +166,5 @@ def welcome_banner():
 
 # print_word_to_revise("five", ["rima"], 3)
 # welcome_banner()
+
+print_stats(5, 2, 3, [3, 12], 5)
