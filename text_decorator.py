@@ -109,7 +109,7 @@ def print_word_to_revise(word, answers, times_wrong):
     word_text = f"'{word.upper()}"
     answers_text = "which means { " + ", ".join(answers).upper() + " }"
     times_wrong_text = f"( you got this wrong {times_wrong} time" \
-                       f"{pluraliser(times_wrong, 's')}"
+                       f"{pluraliser(times_wrong, 's')} )"
 
     print_bar(2, 75, "▁")
 
@@ -167,4 +167,4 @@ def print_stats(questions, correct, mistakes, time, sec_p_q):
 # print_word_to_revise("five", ["rima"], 3)
 # welcome_banner()
 
-print_stats(5, 2, 3, [3, 12], 5)
+# print_stats(5, 2, 3, [3, 12], 5)
