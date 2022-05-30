@@ -26,7 +26,7 @@ def print_bar(indent, width, character):
 
 # allows text to be placed within a line of characters
 def print_surrounding(indent, character_indent, text, total_width, character):
-    characters_right = (total_width - (indent + character_indent + len(
+    characters_right = int(total_width - (indent + character_indent + len(
         text) + 2)) * character
     print(f"{indent*' '}{character_indent*character} {text} {characters_right}")
 
