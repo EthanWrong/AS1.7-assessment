@@ -11,6 +11,7 @@
 + adjust text formatting for collection selection & language selection
 + adjust text formatting for test user & review stats
 + adjust text formatting for review mistakes & word to revise & welcome screen
++ improved instructions
 
 
 To add (maybe):
@@ -19,9 +20,6 @@ Entering a '?' while translating does not mean a mistake, but a question
 that you didn't know?
 Add an easter-egg 'default settings' that skips all the pregame stuff and
 chooses numbers collection and sets language to english
-
-To do:
-Global indent in instructions + concisify
 """
 import library_v2
 import random
@@ -310,29 +308,21 @@ def find_min_and_sec(seconds):
 
 # WELCOME INSTRUCTIONS
 def instructions():
-    print("PRE-GAME")
-    print("You will be able to select different collections of words to \n"
-          "learn from. Simply choose all the collections you would like to \n"
-          "learn, then exit collection selection.\n"
-          "You will then choose which language you would like to answer "
-          "in:\n You can choose Maori, English, or Both. \n"
-          "Simply enter a language and the quiz will begin.")
-    print("\nTHE QUIZ")
-    print("You will be asked to translate a word from either Maori or "
-          "English.\nSimply enter the word.\nIf you are unsure of the word, "
-          "enter '?' so that it doesn't count as incorrect.\nHowever, "
-          "two more instances of the word will be added for "
-          "practice.\nLikewise if you make a mistake, two more instances of "
-          "the word will be added for practice.\nIf you wish to stop "
-          "playing, simply enter 'x' and you will exit the game. "
-          "\nOtherwise, try to answer all the questions!")
-    print("\nPOST-GAME")
-    print("First, you will be shown all your stats, such as time, questions \n"
-          "answered, and mistakes. If you wish to review your mistakes in "
-          "\nMore detail, feel free to do so, and you will get information \n"
-          "about which questions you struggled the most with.")
-    print("\nThat is all the information you need to know, enjoy the game!")
     print()
+    print(f"{global_indent}This quiz is a whole-word answer quiz that tests "
+          f"your knowledge of the\n{global_indent}Maori language and helps you"
+          f" to improve.\n{global_indent}After selecting the words you wish "
+          f"to learn and the language you wish to\n{global_indent}answer in, "
+          f"you will continue translating words until you have translated\n"
+          f"{global_indent}all the words you selected.\n{global_indent}Once "
+          f"you have finished translating words, you will be able to review "
+          f"your\n{global_indent}stats and mistakes.\n\n"
+          f"{global_indent}NOTES:\n{global_indent}When "
+          f"choosing a language, you can choose 'both' if you wish to answer"
+          f" in\n{global_indent}Maori and English.\n{global_indent}When "
+          f"translating, enter 'x' if you wish to stop the quiz there.")
+
+    text_decorator.print_divide_section()
 
 
 def welcome():
