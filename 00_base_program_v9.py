@@ -31,8 +31,8 @@ import text_decorator
 # choice interpreter that checks choice is valid, and does action accordingly
 def choice_selection(master):
     collections = []
-    choice = input(f"{GLOBAL_INDENT}From what collection of words would you "
-                   f"like to learn? \n{GLOBAL_INDENT} Enter '?' for "
+    choice = input(f"{GI_TXT}From what collection of words would you "
+                   f"like to learn? \n{GI_TXT} Enter '?' for "
                    f"collection options >>> ").lower()
 
     while True:
@@ -43,14 +43,14 @@ def choice_selection(master):
                 master = add_collections(w, master)
                 collections.append(w)
             collection_added_text = f"Collections {', '.join(collections)} added"
-            text_decorator.print_centre(2, collection_added_text, 71, "+")
+            text_decorator.print_centre(GI, collection_added_text, 71, "+")
 
         elif choice == "?":
 
             print()
 
-            print(f"{GLOBAL_INDENT}The available collections to learn from "
-                  f"are:\n{GLOBAL_INDENT} {', '.join(library_v2.collections)},"
+            print(f"{GI_TXT}The available collections to learn from "
+                  f"are:\n{GI_TXT} {', '.join(library_v2.collections)},"
                   f" or 'all'")
 
         elif choice == "x":
@@ -59,7 +59,7 @@ def choice_selection(master):
                 # print()
                 break
             else:
-                print(f"{GLOBAL_INDENT}You do have to pick SOME words, silly")
+                print(f"{GI_TXT}You do have to pick SOME words, silly")
 
         # checks choice is a collection name
         elif choice in library_v2.collections:
@@ -72,35 +72,35 @@ def choice_selection(master):
                 collections.append(choice)
 
                 collection_added_text = f"Collection {choice.upper()} added"
-                text_decorator.print_centre(2, collection_added_text, 40, "+")
+                text_decorator.print_centre(GI, collection_added_text, 40, "+")
 
             else:
-                print(f"{GLOBAL_INDENT}You have already added that collection")
+                print(f"{GI_TXT}You have already added that collection")
 
         else:
-            print(f"{GLOBAL_INDENT}Sorry, but that collection does not exist")
+            print(f"{GI_TXT}Sorry, but that collection does not exist")
 
         print()
 
         # checks if all collections have been added to master list
         if len(collections) == len(library_v2.collections):
-            print(f"{GLOBAL_INDENT}All collections have been added")
+            print(f"{GI_TXT}All collections have been added")
             break
 
         # asks the user for input
         if not collections:  # if nothing has been chosen
-            choice = input(f"{GLOBAL_INDENT}From what collection of words "
+            choice = input(f"{GI_TXT}From what collection of words "
                            f"would you like to learn? >>> ").lower()
 
         else:  # is something has been chosen
-            choice = input(f"{GLOBAL_INDENT}If you would like to add another "
-                           f"collection, do so.\n{GLOBAL_INDENT} Otherwise "
+            choice = input(f"{GI_TXT}If you would like to add another "
+                           f"collection, do so.\n{GI_TXT} Otherwise "
                            "type 'x' >>> ").lower()
 
-    print(f"{GLOBAL_INDENT}<< Choice selection COMPLETE >> ")
+    print(f"{GI_TXT}<< Choice selection COMPLETE >> ")
     print()
     collections_chosen_text = f"You chose: {', '.join(collections)}"
-    text_decorator.print_surrounding(2, 6, collections_chosen_text, 75, ":")
+    text_decorator.print_surrounding(GI, 6, collections_chosen_text, 75, ":")
     return master
 
 
@@ -134,7 +134,7 @@ def abcd_checker(question, a, b, c=None, d=None):
     while True:
 
         # Ask the user the input question
-        answer = input(f"{GLOBAL_INDENT}{question.capitalize()} >>> ").lower()
+        answer = input(f"{GI_TXT}{question.capitalize()} >>> ").lower()
 
         # True if answer is the answer, or first letter of answer
         if answer in (a, a[0]):
@@ -158,17 +158,17 @@ def abcd_checker(question, a, b, c=None, d=None):
         else:
             # if c and d have not been assigned
             if c is None and d is None:
-                print(f"{GLOBAL_INDENT}  Please answer '{a}' or '{b}'")
+                print(f"{GI_TXT}  Please answer '{a}' or '{b}'")
 
             # if d has not been assigned
             elif d is None:
-                print(f"{GLOBAL_INDENT}  Please answer '{a}', '{b}', or '{c}'")
+                print(f"{GI_TXT}  Please answer '{a}', '{b}', or '{c}'")
 
             # if all possible answers have been assigned
             else:
-                print(f"{GLOBAL_INDENT}  Please answer '{a}', '{b}', '{c}', "
+                print(f"{GI_TXT}  Please answer '{a}', '{b}', '{c}', "
                       f"or '{d}'")
-            print(f"{GLOBAL_INDENT}  < Initial also works >")
+            print(f"{GI_TXT}  < Initial also works >")
             print()
 
 
@@ -186,7 +186,7 @@ def set_language(language):
     elif language == "both":
         return random.choice(("maori", "english"))
     else:
-        print(f"{GLOBAL_INDENT}<error>, invalid language chosen")
+        print(f"{GI_TXT}<error>, invalid language chosen")
 
 
 # will return a list
@@ -204,7 +204,7 @@ def get_question(word_set, language):
 
 def test_user(question, answers, question_number, language="undefined"):
     # asks the question
-    question_text = f"{GLOBAL_INDENT}{question_number}) Translate " \
+    question_text = f"{GI_TXT}{question_number}) Translate " \
                     f"'{question.upper()}' into {language.capitalize()} >>> "
     user_answer = input(question_text)
 
@@ -218,7 +218,7 @@ def test_user(question, answers, question_number, language="undefined"):
     # if user wishes to exit the program
     elif user_answer == "x":
         exit_warning = f"Are you sure you want to quit? You " \
-                       f"will not be able to\n{GLOBAL_INDENT} continue this " \
+                       f"will not be able to\n{GI_TXT} continue this " \
                        f"game"
         print()
         want_to_quit = abcd_checker(exit_warning, "yes", "no")
@@ -260,11 +260,11 @@ def play_round(chosen_language, master, question_number):
     is_correct = test_user(question, answers, question_number, language)
     if is_correct == "exit":
         print()
-        text_decorator.print_surrounding(2, 6, "Game Over", 75, ":")
+        text_decorator.print_surrounding(GI, 6, "Game Over", 75, ":")
         return []
     elif is_correct == "repeat":
         print()
-        text_decorator.print_surrounding(2, 6, "Good for you", 75, ":")
+        text_decorator.print_surrounding(GI, 6, "Good for you", 75, ":")
 
     else:  # if the answer is right / wrong
         if is_correct:
@@ -309,17 +309,17 @@ def find_min_and_sec(seconds):
 # WELCOME INSTRUCTIONS
 def instructions():
     print()
-    print(f"{GLOBAL_INDENT}This quiz is a whole-word answer quiz that tests "
-          f"your knowledge of the\n{GLOBAL_INDENT}Maori language and helps you"
-          f" to improve.\n{GLOBAL_INDENT}After selecting the words you wish "
-          f"to learn and the language you wish to\n{GLOBAL_INDENT}answer in, "
+    print(f"{GI_TXT}This quiz is a whole-word answer quiz that tests "
+          f"your knowledge of the\n{GI_TXT}Maori language and helps you"
+          f" to improve.\n{GI_TXT}After selecting the words you wish "
+          f"to learn and the language you wish to\n{GI_TXT}answer in, "
           f"you will continue translating words until you have translated\n"
-          f"{GLOBAL_INDENT}all the words you selected.\n{GLOBAL_INDENT}Once "
+          f"{GI_TXT}all the words you selected.\n{GI_TXT}Once "
           f"you have finished translating words, you will be able to review "
-          f"your\n{GLOBAL_INDENT}stats and mistakes.\n\n"
-          f"{GLOBAL_INDENT}NOTES:\n{GLOBAL_INDENT}When "
+          f"your\n{GI_TXT}stats and mistakes.\n\n"
+          f"{GI_TXT}NOTES:\n{GI_TXT}When "
           f"choosing a language, you can choose 'both' if you wish to answer"
-          f" in\n{GLOBAL_INDENT}Maori and English.\n{GLOBAL_INDENT}When "
+          f" in\n{GI_TXT}Maori and English.\n{GI_TXT}When "
           f"translating, enter 'x' if you wish to stop the quiz there.")
 
     text_decorator.print_divide_section()
@@ -398,8 +398,8 @@ def review_mistakes(mistakes):
             user_answer_text = "  >> You answered '" + \
                                mistakes[f]['user_answer'] + "'"
 
-            print(f"{GLOBAL_INDENT}{f + 1}) {correct_text}")
-            print(f"{GLOBAL_INDENT}{user_answer_text}")
+            print(f"{GI_TXT}{f + 1}) {correct_text}")
+            print(f"{GI_TXT}{user_answer_text}")
 
     text_decorator.print_divide_section()
     input("  Press enter to get your Word to Revise >>> ")  # just waits for
@@ -428,8 +428,10 @@ def review_stats(correct, mistakes, seconds):
 
 # pre-game
 
-global GLOBAL_INDENT
-GLOBAL_INDENT = " " * 2
+global GI_TXT  # global indent as string
+GI_TXT = text_decorator.GI * " "
+global GI  # global indent as int
+GI = text_decorator.GI
 
 # WELCOME INSTRUCTIONS
 welcome()
@@ -456,7 +458,7 @@ language_choice = abcd_checker("What language would you like to answer in",
 print()
 
 print_text = f"You chose to answer in: {language_choice.upper()}"
-text_decorator.print_surrounding(2, 6, print_text, 75, ":")
+text_decorator.print_surrounding(GI, 6, print_text, 75, ":")
 text_decorator.print_divide_section()
 
 # PLAY ROUND
@@ -492,7 +494,7 @@ print()
 if len(user_mistakes) > 0:
     review_mistakes(user_mistakes)
 else:
-    print(f"{GLOBAL_INDENT}You didn't make any mistakes! Ka Pai!")
+    print(f"{GI_TXT}You didn't make any mistakes! Ka Pai!")
 
 print()
 text_decorator.print_bar(0, 79, "*")

@@ -33,8 +33,8 @@ import text_decorator
 # choice interpreter that checks choice is valid, and does action accordingly
 def choice_selection(master):
     collections = []
-    choice = input(f"{GLOBAL_INDENT}From what collection of words would you "
-                   f"like to learn? \n{GLOBAL_INDENT} Enter '?' for "
+    choice = input(f"{GI_TXT}From what collection of words would you "
+                   f"like to learn? \n{GI_TXT} Enter '?' for "
                    f"collection options >>> ").lower()
 
     while True:
@@ -51,8 +51,8 @@ def choice_selection(master):
 
             print()
 
-            print(f"{GLOBAL_INDENT}The available collections to learn from "
-                  f"are:\n{GLOBAL_INDENT} {', '.join(library_v2.collections)},"
+            print(f"{GI_TXT}The available collections to learn from "
+                  f"are:\n{GI_TXT} {', '.join(library_v2.collections)},"
                   f" or 'all'")
 
         elif choice == "x":
@@ -61,7 +61,7 @@ def choice_selection(master):
                 # print()
                 break
             else:
-                print(f"{GLOBAL_INDENT}You do have to pick SOME words, silly")
+                print(f"{GI_TXT}You do have to pick SOME words, silly")
 
         # checks choice is a collection name
         elif choice in library_v2.collections:
@@ -77,29 +77,29 @@ def choice_selection(master):
                 text_decorator.print_centre(2, print_text, 40, "+")
 
             else:
-                print(f"{GLOBAL_INDENT}You have already added that collection")
+                print(f"{GI_TXT}You have already added that collection")
 
         else:
-            print(f"{GLOBAL_INDENT}Sorry, but that collection does not exist")
+            print(f"{GI_TXT}Sorry, but that collection does not exist")
 
         print()
 
         # checks if all collections have been added to master list
         if len(collections) == len(library_v2.collections):
-            print(f"{GLOBAL_INDENT}All collections have been added")
+            print(f"{GI_TXT}All collections have been added")
             break
 
         # asks the user for input
         if not collections:  # if nothing has been chosen
-            choice = input(f"{GLOBAL_INDENT}From what collection of words "
+            choice = input(f"{GI_TXT}From what collection of words "
                            f"would you like to learn? >>> ").lower()
 
         else:  # is something has been chosen
-            choice = input(f"{GLOBAL_INDENT}If you would like to add another "
-                           f"collection, do so.\n{GLOBAL_INDENT} Otherwise "
+            choice = input(f"{GI_TXT}If you would like to add another "
+                           f"collection, do so.\n{GI_TXT} Otherwise "
                            "type 'x' >>> ").lower()
 
-    print(f"{GLOBAL_INDENT}<< Choice selection COMPLETE >> ")
+    print(f"{GI_TXT}<< Choice selection COMPLETE >> ")
     print()
     print_text = f"You chose: {', '.join(collections)}"
     text_decorator.print_surrounding(2, 6, print_text, 75, ":")
@@ -136,7 +136,7 @@ def abcd_checker(question, a, b, c=None, d=None):
     while True:
 
         # Ask the user the input question
-        answer = input(f"{GLOBAL_INDENT}{question.capitalize()} >>> ").lower()
+        answer = input(f"{GI_TXT}{question.capitalize()} >>> ").lower()
 
         # True if answer is the answer, or first letter of answer
         if answer in (a, a[0]):
@@ -160,17 +160,17 @@ def abcd_checker(question, a, b, c=None, d=None):
         else:
             # if c and d have not been assigned
             if c is None and d is None:
-                print(f"{GLOBAL_INDENT}  Please answer '{a}' or '{b}'")
+                print(f"{GI_TXT}  Please answer '{a}' or '{b}'")
 
             # if d has not been assigned
             elif d is None:
-                print(f"{GLOBAL_INDENT}  Please answer '{a}', '{b}', or '{c}'")
+                print(f"{GI_TXT}  Please answer '{a}', '{b}', or '{c}'")
 
             # if all possible answers have been assigned
             else:
-                print(f"{GLOBAL_INDENT}  Please answer '{a}', '{b}', '{c}', "
+                print(f"{GI_TXT}  Please answer '{a}', '{b}', '{c}', "
                       f"or '{d}'")
-            print(f"{GLOBAL_INDENT}  < Initial also works >")
+            print(f"{GI_TXT}  < Initial also works >")
             print()
 
 
@@ -188,7 +188,7 @@ def set_language(language):
     elif language == "both":
         return random.choice(("maori", "english"))
     else:
-        print(f"{GLOBAL_INDENT}<error>, invalid language chosen")
+        print(f"{GI_TXT}<error>, invalid language chosen")
 
 
 # will return a list
@@ -434,8 +434,8 @@ def pluraliser(amount, conjugation):
 
 # pre-game
 
-global GLOBAL_INDENT
-GLOBAL_INDENT = " " * 2
+global GI_TXT
+GI_TXT = " " * 2
 
 # # WELCOME INSTRUCTIONS
 # welcome()
