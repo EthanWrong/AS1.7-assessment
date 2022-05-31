@@ -111,7 +111,7 @@ def print_question_divider():
 
 # specifically prints word to revise
 def print_word_to_revise(word, answers, times_wrong):
-    word_text = f"'{word.upper()}"
+    word_text = f"'{word.upper()}'"
     answers_text = "which means { " + ", ".join(answers).upper() + " }"
     times_wrong_text = f"( you got this wrong {times_wrong} time" \
                        f"{pluraliser(times_wrong, 's')} )"

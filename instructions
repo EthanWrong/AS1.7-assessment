@@ -1,3 +1,5 @@
+Version 1:
+
 This quiz is a whole-word answer quiz that tests your knowledge of the\n
 Maori language and helps you to improve.\n
 After selecting the words you wish to learn and the language you wish to\n
@@ -10,3 +12,39 @@ NOTES:\n
   When choosing a language, you can choose 'both' if you wish to answer in\n
    Maori and English.\n
   When translating, enter 'x' if you wish to stop the quiz there.\n
+
+
+Version 2:
+
+This word-translation will help you learn some Maori words.\n
+\n
+First you will select which categories of words you wish to learn. You can\n
+ choose ().\n
+\n
+Next, you will choose which language you wish to answer in: Maori, English,\n
+ or Both\n
+\n
+Then the game will start, and you will be asked to translate words into
+ your chosen language until you have either translated them all, or you\n
+ stop the game by entering 'x'\n
+\n
+Every time you get a question wrong, it will be recorded as a mistake and\n
+ you will be given two more of that same question (practice makes\n
+ perfect). To help you, the game will also give you all the possible\n
+ answers\n
+\n
+Many words have multiple different answers for each language:\n
+ In Maori, there are usually a couple different translations which are\n
+  valid, and answering without macrons is also valid\n
+ In English, you can answer with the first three letters of the days and\n
+  months, and just the numeral for numbers\n
+ (Remember, making mistakes is how you learn, so make sure you check all\n
+ the other possible answers that work if you get one wrong)\n
+\n
+At the end of the game you will see your stats such as questions\n
+ right/wrong and how fast you were at answering them. You will also have\n
+ the option to review your mistakes and see all the questions you got\n
+ wrong.\n
+\n
+Finally, you will be given your 'Word to Revise'--this is the word you got\n
+ wrong the most, so practice it!\n

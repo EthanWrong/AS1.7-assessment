@@ -73,27 +73,27 @@ days_collection = [
     },
     {
         "english": ["tuesday", "tue"],
-        "maori": ["rātū ", "ratu", "turei"]
+        "maori": ["rātū", "ratu", "turei"]
     },
     {
         "english": ["wednesday", "wed"],
-        "maori": ["rāapa ", "raapa", "wenerei"]
+        "maori": ["rāapa", "raapa", "wenerei"]
     },
     {
         "english": ["thursday", "thu"],
-        "maori": ["rāpare ", "rapare", "taite"]
+        "maori": ["rāpare", "rapare", "taite"]
     },
     {
         "english": ["friday", "fri"],
-        "maori": ["rāmere ", "ramere", "paraire"]
+        "maori": ["rāmere", "ramere", "paraire"]
     },
     {
         "english": ["saturday", "sat"],
-        "maori": ["rāhoroi ", "rahoroi", "hatarei"]
+        "maori": ["rāhoroi", "rahoroi", "hatarei"]
     },
     {
         "english": ["sunday", "sun"],
-        "maori": ["rātapu ", "ratapu"]
+        "maori": ["rātapu", "ratapu"]
     }
 ]
 
