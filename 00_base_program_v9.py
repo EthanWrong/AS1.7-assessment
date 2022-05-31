@@ -206,7 +206,7 @@ def test_user(question, answers, question_number, language="undefined"):
     # asks the question
     question_text = f"{GI_TXT}{question_number}) Translate " \
                     f"'{question.upper()}' into {language.capitalize()} >>> "
-    user_answer = input(question_text)
+    user_answer = input(question_text).lower()
 
     # if answer is correct
     if user_answer in answers:
