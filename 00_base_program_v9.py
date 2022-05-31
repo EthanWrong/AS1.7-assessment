@@ -466,7 +466,7 @@ text_decorator.print_divide_section()
 user_mistakes = []
 correct_answers = []
 
-# game mechanics / looping
+# during game: game mechanics / looping
 text_decorator.print_section_title("quiz time")
 print()
 
