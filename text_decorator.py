@@ -7,6 +7,9 @@ Code commented with 'specifically' has been made for the Maori Quiz.
 This code is copied from 12_text_decoration_v2 (used to be component 12 in
 the Maori Quiz, but was renamed because Python import does not work with
 numbers at the start of the filename)
+
+Global Indent is how much all text that is not a header will be indented by
+default.
 """
 import math
 
@@ -26,8 +29,10 @@ def print_bar(indent, width, character):
 
 # allows text to be placed within a line of characters
 def print_surrounding(indent, character_indent, text, total_width, character):
+
     characters_right = int(total_width - (indent + character_indent + len(
-        text) + 2)) * character
+        text) + 2)) * character  # the 2 is to account for spaces
+
     print(f"{indent*' '}{character_indent*character} {text} {characters_right}")
 
 
@@ -45,7 +50,7 @@ def print_centre(indent, text, total_width, character):
 
 # indents text to be used in body
 def body_indent(extra_indent=0):
-    return " " * 2 + extra_indent*" "
+    return " " * GI + extra_indent*" "
 
 
 # specifically prints section title
@@ -65,25 +70,25 @@ def print_divide_section():
 
 # specifically prints correct answer
 def print_correct_answer(user_answer):
-    print_bar(2, 75, "▁")
+    print_bar(GI, 75, "▁")
 
     text = f"'{user_answer.upper()}' ✓ Correct"
-    print_surrounding(2, 4, text, 77, "▓")
+    print_surrounding(GI, 4, text, 77, "▓")
 
-    print_bar(2, 75, "▔")
+    print_bar(GI, 75, "▔")
 
 
 # specifically prints incorrect answer
 def print_incorrect_answer(user_answer, correct_answer):
-    print_bar(2, 75, "▁")
+    print_bar(GI, 75, "▁")
 
     incorrect_text = f"'{user_answer.upper()}' ✗ Incorrect"
-    print_surrounding(2, 4, incorrect_text, 77, "░")
+    print_surrounding(GI, 4, incorrect_text, 77, "░")
 
     correct_text = f"'{correct_answer.upper()}' is the answer"
-    print_surrounding(2, 4, correct_text, 77, "▓")
+    print_surrounding(GI, 4, correct_text, 77, "▓")
 
-    print_bar(2, 75, "▔")
+    print_bar(GI, 75, "▔")
 
 
 # specifically prints possible answers
@@ -101,7 +106,7 @@ def print_questions_left(number):
 
 # specifically prints question divider
 def print_question_divider():
-    print_bar(2, 75, "-")
+    print_bar(GI, 75, "-")
 
 
 # specifically prints word to revise
@@ -111,16 +116,16 @@ def print_word_to_revise(word, answers, times_wrong):
     times_wrong_text = f"( you got this wrong {times_wrong} time" \
                        f"{pluraliser(times_wrong, 's')} )"
 
-    print_bar(2, 75, "▁")
+    print_bar(GI, 75, "▁")
 
-    print_bar(2, 75, "▓")
-    print_centre(2, word_text, 75, "▓")
-    print_centre(2, answers_text, 75, "▒")
-    print_bar(2, 75, "▒")
-    print_centre(2, times_wrong_text, 75, "░")
-    print_bar(2, 75, "░")
+    print_bar(GI, 75, "▓")
+    print_centre(GI, word_text, 75, "▓")
+    print_centre(GI, answers_text, 75, "▒")
+    print_bar(GI, 75, "▒")
+    print_centre(GI, times_wrong_text, 75, "░")
+    print_bar(GI, 75, "░")
 
-    print_bar(2, 75, "▔")
+    print_bar(GI, 75, "▔")
 
 
 # specifically prints welcome banner
@@ -149,11 +154,18 @@ def print_stats(questions, correct, mistakes, time, sec_p_q):
           f"question")
 
 
+# main routine / loose code
+
+
+global GI  # global indent, a string of spaces
+GI = 2
+
+
 # example code below
 
 
 # print_bar(0, 79, "-")
-# print_surrounding(2, 4, "'TWO' is correct", 77, "*")
+# print_surrounding(GI, 4, "'TWO' is correct", 77, "*")
 
 # print(f"{body_indent()}this is indented")
 # print_divide_section()
