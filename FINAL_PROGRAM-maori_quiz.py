@@ -33,8 +33,8 @@ def choice_selection(master):
             for w in library_v2.collections:
                 master = add_collections(w, master)
                 collections.append(w)
-            collection_added_text = f"Collections {', '.join(collections)} " \
-                                    f"added"
+            collection_added_text = \
+                f"Collections {', '.join(collections)} added"
             text_decorator.print_centre(GI, collection_added_text, 71, "+")
 
         elif choice == "?":
