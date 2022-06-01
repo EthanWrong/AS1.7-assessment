@@ -18,6 +18,7 @@ Maori translation(s).
 because there may be multiple acceptable translations for each word. The
 first word in each list is the best translation and should be used to display.
 """
+
 # list of all the collections in this library
 collections = ["numbers", "days", "months"]
 
